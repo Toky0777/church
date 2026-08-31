@@ -1,0 +1,79 @@
+@import "tailwindcss";
+
+:root {
+  /* Antsonjobe — La Suite : palette de terre, bois, pierre et lumière */
+  --color-bone: #f7f3ec;    /* blanc cassé — fond principal */
+  --color-sand: #e9dfcf;    /* beige chaud — fonds secondaires */
+  --color-stone: #a8a196;   /* gris pierre — bordures, texte secondaire */
+  --color-wood: #7a5c3e;    /* brun bois — accents structurels */
+  --color-ink: #1c1a17;     /* noir profond — texte, contraste */
+  --color-accent: #6e7f5c;  /* vert olive discret — CTA, liens, progression */
+  --color-accent-dark: #56624a;
+
+  --font-display: "Libre Baskerville", Georgia, serif;
+  --font-body: "Plus Jakarta Sans", system-ui, sans-serif;
+}
+
+@theme inline {
+  --color-bone: var(--color-bone);
+  --color-sand: var(--color-sand);
+  --color-stone: var(--color-stone);
+  --color-wood: var(--color-wood);
+  --color-ink: var(--color-ink);
+  --color-accent: var(--color-accent);
+  --color-accent-dark: var(--color-accent-dark);
+
+  --font-display: var(--font-display);
+  --font-body: var(--font-body);
+  --container-content: 72rem;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background: var(--color-bone);
+    color: var(--color-ink);
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-display);
+    letter-spacing: -0.01em;
+    line-height: 1.1;
+  }
+
+  p {
+    max-width: 62ch;
+  }
+
+  /* Focus visible clair, sur fond clair et sombre */
+  :focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  ::selection {
+    background: var(--color-accent);
+    color: var(--color-bone);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
