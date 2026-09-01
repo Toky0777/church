@@ -87,34 +87,23 @@ export const testimonials: Testimonial[] = [
 export const constructionUpdates: ConstructionUpdate[] = [
   {
     id: "1",
-    day: 82,
-    date: "2026-08-24",
-    title: "La toiture commence",
-    description:
-      "Après la structure porteuse, les premières charpentes sont posées.",
-    mediaUrls: [],
-    relatedStepId: "toiture",
+    day: 1,
+    date: "2026-07-20",
+    title: "Pose de la première pierre",
+    description: "Lancement officiel des travaux avec la pose du premier élément de la structure.",
+    mediaUrls: ["/img/premierPierre.jpeg"],
+    relatedStepId: "structure"
   },
   {
     id: "2",
-    day: 63,
-    date: "2026-08-05",
-    title: "Une nouvelle étape franchie",
-    description:
-      "La structure du bâtiment est désormais achevée sur l'ensemble de sa surface.",
-    mediaUrls: [],
-    relatedStepId: "structure",
-  },
-  {
-    id: "3",
-    day: 47,
-    date: "2026-07-20",
+    day: 8, // Ajusté selon la chronologie (20 juillet au 27 juillet = 8 jours)
+    date: "2026-07-27",
     title: "Les murs prennent forme",
-    description:
-      "La structure porteuse est désormais visible sur l'ensemble du bâtiment.",
-    mediaUrls: [],
-    relatedStepId: "structure",
-  },
+    description: "La structure porteuse est désormais visible sur l'ensemble du bâtiment.",
+    mediaUrls: ["/img/murs.jpeg"],
+    relatedStepId: "structure"
+  }
+
 ];
 
 // Rapports financiers — montants à `null` tant que les chiffres réels ne

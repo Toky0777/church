@@ -1,6 +1,10 @@
+"use client";
+
+import { useState } from "react";
 import Image from "next/image";
 import { formatDate } from "@/lib/format";
 import { PlaceholderTile } from "./PlaceholderTile";
+import { ImageLightbox } from "./ImageLightbox";
 import type { ConstructionUpdate } from "@/lib/types";
 
 interface ConstructionUpdateCardProps {
@@ -9,18 +13,32 @@ interface ConstructionUpdateCardProps {
 
 export function ConstructionUpdateCard({ update }: ConstructionUpdateCardProps) {
   const cover = update.mediaUrls[0];
+  const [isLightboxOpen, setIsLightboxOpen] = useState(false);
 
   return (
     <article className="grid gap-5 border-t border-stone/25 py-8 first:border-t-0 first:pt-0 sm:grid-cols-[220px_1fr]">
       <div className="aspect-[4/3] overflow-hidden bg-sand">
         {cover ? (
-          <Image
-            src={cover}
-            alt=""
-            width={440}
-            height={330}
-            className="h-full w-full object-cover"
-          />
+          <>
+            <button
+              onClick={() => setIsLightboxOpen(true)}
+              className="w-full h-full cursor-pointer transition-opacity hover:opacity-90"
+            >
+              <Image
+                src={cover}
+                alt={update.title}
+                width={440}
+                height={330}
+                className="h-full w-full object-cover"
+              />
+            </button>
+            <ImageLightbox
+              src={cover}
+              alt={update.title}
+              isOpen={isLightboxOpen}
+              onClose={() => setIsLightboxOpen(false)}
+            />
+          </>
         ) : (
           <PlaceholderTile label={update.title} className="h-full w-full" />
         )}
