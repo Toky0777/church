@@ -120,8 +120,8 @@ export const financialReports: FinancialReport[] = [
 
 // Responsables du projet — noms et coordonnées à confirmer avant mise en ligne.
 export const contacts: Contact[] = [
-  { name: "[Nom à confirmer]", role: "Responsable du projet" },
-  { name: "[Nom à confirmer]", role: "Trésorerie" },
+  { name: "Jeannie RASOARIVOLOLONA", role: "Loholona" },
+  { name: "Mampionona RAKOTONDRAMANANA", role: "Trésorerie" },
 ];
 
 // Actualités — structure de démonstration. Les vrais articles remplaceront
