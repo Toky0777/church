@@ -61,7 +61,7 @@ export default function NotreHistoirePage() {
                 jouée entre ces murs de bois.
               </p>
             </div>
-            <PlaceholderTile label="ancienne église en bois" className="aspect-[4/3]" />
+            <PlaceholderTile src="/img/bois2.jpeg" alt="ancienne église en bois" label="enfants" className="aspect-[4/3]" width={520} height={400} />
           </section>
 
           {/* Timeline */}
@@ -69,7 +69,7 @@ export default function NotreHistoirePage() {
             <h2 className="font-display text-3xl">26 ans en quelques étapes</h2>
             <Timeline
               items={[
-                { label: "1999", description: "La communauté grandit." },
+                { label: "2000", description: "La communauté grandit." },
                 { label: "26 années", description: "Une génération après l'autre." },
                 { label: "Aujourd'hui", description: "La nouvelle construction commence." },
                 { label: "Demain", description: "Une maison pour les générations futures." },
@@ -81,10 +81,10 @@ export default function NotreHistoirePage() {
           <section className="space-y-6">
             <h2 className="font-display text-3xl">Des visages, une histoire</h2>
             <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
-              <PlaceholderTile label="enfants" />
-              <PlaceholderTile label="culte" />
-              <PlaceholderTile label="baptême" />
-              <PlaceholderTile label="famille" />
+              <PlaceholderTile src="/img/enfant.jpeg" alt="enfant Ja" label="enfants" className="aspect-[4/3]" />
+              <PlaceholderTile src="/img/culte.jpeg" alt="culte sabbat" label="enfants" className="aspect-[4/3]" />
+              <PlaceholderTile src="/img/eglise-interieur.jpeg" alt="eglise interieur" label="enfants" className="aspect-[4/3]" />
+              <PlaceholderTile src="/img/all.jpeg" alt="fiaraha misakafo" label="enfants" className="aspect-[4/3]" />
             </div>
           </section>
 

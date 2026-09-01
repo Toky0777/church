@@ -53,6 +53,7 @@ export const testimonials: Testimonial[] = [
     id: "1",
     name: "Toky Fitiavana Enoka RAMANANJARA",
     role: "Membre depuis 2000",
+    photoUrl: "/img/toky.jpeg",
     quote:
       "Cette église en bois a vu grandir mes enfants. J'ai hâte de voir la nouvelle maison accueillir mes petits-enfants.",
   },
@@ -60,6 +61,7 @@ export const testimonials: Testimonial[] = [
     id: "2",
     name: "Priscilla Fifaliana RASOANAIVO",
     role: "Jeune de la communauté",
+    photoUrl: "/img/priscilla.jpeg",
     quote:
       "Je n'ai connu que l'église en bois. Faire partie de la construction de la nouvelle, c'est écrire la suite de son histoire.",
   },
@@ -67,6 +69,7 @@ export const testimonials: Testimonial[] = [
     id: "3",
     name: "Manoa Fifaliana RAFANOMEZANTSOA",
     role: "Loholona",
+    photoUrl: "/img/manoa.jpeg",
     quote:
       "Cette église en bois a vu grandir mes enfants. J'ai hâte de voir la nouvelle maison accueillir mes petits-enfants.",
   },

@@ -36,7 +36,7 @@ const sampleNeedUnconfirmed = {
 const sampleTestimonial = {
   id: "1",
   name: "Prénom Nom",
-  role: "Membre depuis 1999",
+  role: "Membre depuis 2000",
   quote:
     "Cette église en bois a vu grandir mes enfants. J'ai hâte de voir la nouvelle maison accueillir mes petits-enfants.",
 };
@@ -81,7 +81,7 @@ export default function StyleguidePage() {
             <h2 className="font-display text-3xl">26 ans en quelques secondes</h2>
             <Timeline
               items={[
-                { label: "1999", description: "La communauté grandit." },
+                { label: "2000", description: "La communauté grandit." },
                 { label: "26 années", description: "Une génération après l'autre." },
                 { label: "Aujourd'hui", description: "La nouvelle construction commence." },
                 { label: "Demain", description: "Une maison pour les générations futures." },

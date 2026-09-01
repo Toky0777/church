@@ -57,9 +57,10 @@ export function Hero({
           ))}
         </h1>
 
-        <p className="mt-6 max-w-lg text-base text-bone/90 sm:text-lg">
+        <p className="hidden sm:block mt-6 max-w-lg text-base text-bone/90 sm:text-lg">
           {subtitle}
         </p>
+
 
         <div className="mt-9 flex flex-wrap gap-4">
           <CTA href={primaryCta.href} variant="onDark">
