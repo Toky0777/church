@@ -43,9 +43,9 @@ export type NewsCategory =
   | "Chantier"
   | "Témoignages"
   | "Vie de l'église"
-  | "International"
+  | "Concert"
   | "Madagascar"
-  | "Financement";
+  | "Camp";
 
 export interface NewsArticle {
   slug: string;

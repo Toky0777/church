@@ -13,9 +13,9 @@ const categories: NewsCategory[] = [
   "Chantier",
   "Témoignages",
   "Vie de l'église",
-  "International",
+  "Concert",
   "Madagascar",
-  "Financement",
+  "Camp",
 ];
 
 export function NewsFilter({ articles }: NewsFilterProps) {
