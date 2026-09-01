@@ -32,13 +32,13 @@ export default function ContactPage() {
               <div>
                 <h2 className="font-display text-2xl">Coordonnées</h2>
                 <dl className="mt-4 space-y-2 text-ink/70">
-                  <div className="flex gap-2">
+                  {/* <div className="flex gap-2">
                     <dt className="text-ink/50">Email :</dt>
                     <dd>[Email officiel à confirmer]</dd>
-                  </div>
+                  </div> */}
                   <div className="flex gap-2">
                     <dt className="text-ink/50">WhatsApp :</dt>
-                    <dd>[Lien WhatsApp officiel à confirmer]</dd>
+                    <dd>+261 34 01 450 52</dd>
                   </div>
                   <div className="flex gap-2">
                     <dt className="text-ink/50">Lieu :</dt>
