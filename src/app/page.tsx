@@ -38,7 +38,7 @@ export default function Home() {
             </h2>
             <Timeline
               items={[
-                { label: "1999", description: "La communauté grandit." },
+                { label: "2000", description: "La communauté grandit." },
                 { label: "26 années", description: "Une génération après l'autre." },
                 { label: "Aujourd'hui", description: "La nouvelle construction commence." },
                 { label: "Demain", description: "Une maison pour les générations futures." },
@@ -58,9 +58,9 @@ export default function Home() {
               </p>
             </div>
             <div className="grid grid-cols-2 gap-3">
-              <PlaceholderTile label="enfants" className="col-span-2 aspect-[16/9]" />
-              <PlaceholderTile label="famille" className="aspect-square" />
-              <PlaceholderTile label="ancienne église" className="aspect-square" />
+              <PlaceholderTile src="/img/enfantss.jpeg" alt="Enfants dans l'église" label="enfants" className="col-span-3 aspect-[16/9]" width={520} height={400} />
+              <PlaceholderTile src="/img/famille.jpeg" alt="Famille dans l'église" label="famille" className="aspect-square" />
+              <PlaceholderTile src="/img/ancienne-eglise.jpeg" alt="Ancienne église" label="ancienne église" className="aspect-square" />
             </div>
           </section>
 
@@ -129,7 +129,7 @@ export default function Home() {
             </div>
           </section>
 
-          {/* Madagascar / France */}
+          {/* Madagascar / International */}
           <section className="space-y-10">
             <h2 className="max-w-md font-display text-3xl sm:text-4xl">
               Deux pays. Une histoire. Une même mission.

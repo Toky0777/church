@@ -36,7 +36,7 @@ export function MissionSplit() {
 
       <CountryColumn
         flag="🇫🇷"
-        country="France"
+        country="International"
         items={["Mobilisation", "Communication", "Réseau", "Soutien"]}
       />
     </div>

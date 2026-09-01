@@ -70,7 +70,7 @@ export function Hero({
           </CTA>
         </div>
 
-        <p className="mt-10 text-sm text-bone/70">Madagascar · France</p>
+        <p className="mt-10 text-sm text-bone/70">Madagascar · International</p>
       </div>
     </section>
   );

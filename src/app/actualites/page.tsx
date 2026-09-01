@@ -8,7 +8,7 @@ import { newsArticles } from "@/lib/placeholder-data";
 export const metadata: Metadata = {
   title: "Actualités",
   description:
-    "Toutes les actualités du projet Antsonjobe — La Suite : chantier, témoignages, vie de l'église, France et Madagascar.",
+    "Toutes les actualités du projet Antsonjobe — La Suite : chantier, témoignages, vie de l'église, International et Madagascar.",
 };
 
 export default function ActualitesPage() {
@@ -23,7 +23,7 @@ export default function ActualitesPage() {
             <h1 className="font-display text-4xl sm:text-5xl">Actualités</h1>
             <p className="text-lg text-ink/70">
               Le chantier, la vie de la communauté, la mobilisation en
-              France et à Madagascar — tout ce qui fait avancer cette
+              International et à Madagascar — tout ce qui fait avancer cette
               histoire.
             </p>
           </div>

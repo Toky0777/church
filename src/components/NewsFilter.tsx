@@ -13,7 +13,7 @@ const categories: NewsCategory[] = [
   "Chantier",
   "Témoignages",
   "Vie de l'église",
-  "France",
+  "International",
   "Madagascar",
   "Financement",
 ];

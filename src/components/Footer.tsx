@@ -57,7 +57,7 @@ export function Footer() {
 
         <div className="mt-12 flex flex-col gap-2 border-t border-stone/25 pt-6 text-xs text-ink/60 md:flex-row md:items-center md:justify-between">
           <p>© 2026 Fiangonana Adventiste Antsonjobe</p>
-          <p>Madagascar · France</p>
+          <p>Madagascar · International</p>
         </div>
       </div>
     </footer>

@@ -132,7 +132,7 @@ export const newsArticles: NewsArticle[] = [
   {
     slug: "deuxieme-article-a-venir",
     title: "[Titre de l'article à venir]",
-    category: "France",
+    category: "International",
     date: "2026-08-10",
     excerpt: "[Résumé de l'article à venir]",
     body: "",
