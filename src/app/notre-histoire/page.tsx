@@ -61,7 +61,7 @@ export default function NotreHistoirePage() {
                 jouée entre ces murs de bois.
               </p>
             </div>
-            <PlaceholderTile src="/img/bois2.jpeg" alt="ancienne église en bois" label="enfants" className="aspect-[4/3]" width={520} height={400} />
+            <PlaceholderTile src="/img/bois1.jpeg" alt="ancienne église en bois" label="enfants" className="aspect-[4/3]" width={520} height={400} />
           </section>
 
           {/* Timeline */}
