@@ -58,7 +58,7 @@ export default function Home() {
               </p>
             </div>
             <div className="grid grid-cols-2 gap-3">
-              <PlaceholderTile src="/img/enfantss.jpeg" alt="Enfants dans l'église" label="enfants" className="col-span-3 aspect-[16/9]" width={520} height={400} />
+              <PlaceholderTile src="/img/enfantss.jpeg" alt="Enfants dans l'église" label="enfants" className="col-span-3" width={520} height={400} />
               <PlaceholderTile src="/img/famille.jpeg" alt="Famille dans l'église" label="famille" className="aspect-square" />
               <PlaceholderTile src="/img/ancienne-eglise.jpeg" alt="Ancienne église" label="ancienne église" className="aspect-square" />
             </div>
@@ -130,7 +130,7 @@ export default function Home() {
           </section>
 
           {/* Madagascar / International */}
-          <section className="space-y-10">
+          {/* <section className="space-y-10">
             <h2 className="max-w-md font-display text-3xl sm:text-4xl">
               Deux pays. Une histoire. Une même mission.
             </h2>
@@ -139,7 +139,7 @@ export default function Home() {
               La distance géographique ne doit pas empêcher une communauté de
               construire ensemble.
             </p>
-          </section>
+          </section> */}
         </div>
 
         <WhatsAppCTA />
