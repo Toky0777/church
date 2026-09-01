@@ -48,7 +48,7 @@ export function Hero({
       )}
       <div className="absolute inset-0 bg-gradient-to-t from-ink/85 via-ink/25 to-transparent" />
 
-      <div className="relative mx-auto w-full max-w-content px-6 pb-16 pt-32 text-bone">
+      <div className="relative mx-auto w-full max-w-content px-6 pb-5 pt-32 text-bone">
         <h1 className="font-display text-[2.75rem] leading-[1.05] sm:text-6xl md:text-7xl">
           {title.map((line) => (
             <span key={line} className="block">
