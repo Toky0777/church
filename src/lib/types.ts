@@ -81,7 +81,7 @@ export interface Project {
 }
 
 export interface Budget {
-  totalAr: number | null; // montant total du devis quantitatif et estimatif
-  fundedAr: number | null; // montant déjà collecté — null tant que non confirmé
-  documentUrl?: string; // chemin vers le devis PDF téléchargeable
+  totalAr: number;
+  fundedAr: number;
+  documentUrl: string;
 }

@@ -101,7 +101,7 @@ export default function StyleguidePage() {
             <Statistic value={formatAr(budget.totalAr)} label="Budget total" variant="neutral" />
             <Statistic value={formatAr(budget.fundedAr)} label="Déjà financé" variant="positive" />
             <Statistic
-              value={formatAr(budget.totalAr - budget.fundedAr)}
+              value={formatAr((budget.totalAr ?? 0) - (budget.fundedAr ?? 0))}
               label="Reste à financer"
               variant="highlight"
             />
