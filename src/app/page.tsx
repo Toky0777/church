@@ -10,10 +10,10 @@ import { ProjectCard } from "@/components/ProjectCard";
 import { NeedCard } from "@/components/NeedCard";
 import { TestimonialCard } from "@/components/TestimonialCard";
 import { PlaceholderTile } from "@/components/PlaceholderTile";
-import { MissionSplit } from "@/components/MissionSplit";
 import { WhatsAppCTA } from "@/components/WhatsAppCTA";
 import { SectionQuestion } from "@/components/SectionQuestion";
-import { project, needs, testimonials } from "@/lib/placeholder-data";
+import { project, needs, testimonials, budget } from "@/lib/placeholder-data";
+import { formatAr } from "@/lib/format";
 
 export default function Home() {
   return (
@@ -79,11 +79,14 @@ export default function Home() {
           {/* Où en sommes-nous */}
           <section className="space-y-8 border-y border-stone/25 py-16">
             <h2 className="font-display text-3xl sm:text-4xl">Où en sommes-nous ?</h2>
-            <div className="grid grid-cols-2 gap-8 sm:grid-cols-4">
-              <Statistic value="À confirmer" label="Avancement des travaux" />
-              <Statistic value="À confirmer" label="Budget total" />
-              <Statistic value="À confirmer" label="Déjà financé" />
-              <Statistic value="À confirmer" label="Reste à financer" />
+            <div className="grid grid-cols-1 gap-8 sm:grid-cols-3">
+              <Statistic value={formatAr(budget.totalAr)} label="Budget total" variant="neutral" />
+              <Statistic value={formatAr(budget.fundedAr)} label="Déjà financé" variant="positive" />
+              <Statistic
+                value={formatAr(budget.totalAr - budget.fundedAr)}
+                label="Reste à financer"
+                variant="highlight"
+              />
             </div>
           </section>
 

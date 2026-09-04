@@ -1,9 +1,5 @@
-// Données d'exemple pour le développement — À REMPLACER par les données réelles.
-// Les montants et dates non confirmés restent à `null` : ne jamais inventer
-// de chiffre. Les composants doivent afficher un placeholder visible
-// (ex. "Montant à confirmer") lorsque la valeur est `null`.
-
 import type {
+  Budget,
   Contact,
   ConstructionStep,
   ConstructionUpdate,
@@ -32,18 +28,32 @@ export const project: Project = {
   vision:
     "Après plus de 26 ans dans une église en bois, la communauté d'Antsonjobe construit une nouvelle maison pour les générations futures.",
   steps: constructionSteps,
-  progressPercent: null, // à confirmer avant mise en ligne
+  progressPercent: 18,
+};
+
+export const budget: Budget = {
+  totalAr: 253_134_227,
+  fundedAr: 47_026_376,
+  documentUrl: "/devis/devis.pdf",
 };
 
 // Montants volontairement à `null` : à renseigner avec les chiffres réels
 // avant la mise en ligne. Voir §29 du brief — ne jamais inventer de montant.
 export const needs: Need[] = [
-  { id: "maconnerie", icon: "🧱", label: "Maçonnerie", targetAmountAr: null, fundedAmountAr: null },
-  { id: "fenetres", icon: "🪟", label: "Fenêtres", targetAmountAr: null, fundedAmountAr: null },
-  { id: "portes", icon: "🚪", label: "Portes", targetAmountAr: null, fundedAmountAr: null },
-  { id: "electricite", icon: "⚡", label: "Électricité", targetAmountAr: null, fundedAmountAr: null },
-  { id: "toiture", icon: "🏗️", label: "Toiture", targetAmountAr: null, fundedAmountAr: null },
+  // "Maçonnerie et ravalement" du devis (brique) — stade actuel du chantier.
+  { id: "maconnerie", icon: "🧱", label: "Maçonnerie", targetAmountAr: 42_032_100, fundedAmountAr: null },
+  // "Menuiserie en aluminium" (fenêtres) + "Menuiserie métallique" (grilles
+  // de protection des fenêtres) du devis.
+  { id: "fenetres", icon: "🪟", label: "Fenêtres", targetAmountAr: 15_086_500, fundedAmountAr: null },
+  // "Menuiserie en bois" (portes) du devis.
+  { id: "portes", icon: "🚪", label: "Portes", targetAmountAr: 3_942_000, fundedAmountAr: null },
+  // "Électricité" du devis.
+  { id: "electricite", icon: "⚡", label: "Électricité", targetAmountAr: 1_158_500, fundedAmountAr: null },
+  // "Couverture du bâtiment" (charpente + tôle) du devis.
+  { id: "toiture", icon: "🏗️", label: "Toiture", targetAmountAr: 29_093_444, fundedAmountAr: null },
+  // Pas de ligne dédiée dans ce devis — à chiffrer séparément.
   { id: "mobilier", icon: "🪑", label: "Mobilier", targetAmountAr: null, fundedAmountAr: null },
+  // Pas de ligne dédiée dans ce devis — à chiffrer séparément.
   { id: "sonorisation", icon: "🎤", label: "Sonorisation", targetAmountAr: null, fundedAmountAr: null },
 ];
 
@@ -52,10 +62,10 @@ export const testimonials: Testimonial[] = [
   {
     id: "1",
     name: "Toky Fitiavana Enoka RAMANANJARA",
-    role: "Membre depuis 2000",
+    role: "Membre depuis l'enfance",
     photoUrl: "/img/toky.jpeg",
     quote:
-      "Cette église en bois a vu grandir mes enfants. J'ai hâte de voir la nouvelle maison accueillir mes petits-enfants.",
+      "Depuis mes 8 ans, cette église accompagne ma vie. C'est ici que j'ai été baptisé, que j'ai rencontré ma femme et que nous avons commencé notre famille. Aujourd'hui, nous bâtissons l'église où nos enfants grandiront à leur tour.",
   },
   {
     id: "2",
@@ -63,7 +73,7 @@ export const testimonials: Testimonial[] = [
     role: "Jeune de la communauté",
     photoUrl: "/img/priscilla.jpeg",
     quote:
-      "Je n'ai connu que l'église en bois. Faire partie de la construction de la nouvelle, c'est écrire la suite de son histoire.",
+      "Je suis née adventiste et cette église a accompagné toute mon enfance. Elle a entendu mes prières et vu grandir ma foi. Aujourd'hui, je veux participer à écrire le prochain chapitre de son histoire.",
   },
   {
     id: "3",
@@ -71,14 +81,15 @@ export const testimonials: Testimonial[] = [
     role: "Loholona",
     photoUrl: "/img/manoa.jpeg",
     quote:
-      "Cette église en bois a vu grandir mes enfants. J'ai hâte de voir la nouvelle maison accueillir mes petits-enfants.",
+      "Depuis mon enfance, j'ai beaucoup donné à cette église. Désigné Loholona à seulement 24 ans, j'y ai énormément appris. Aujourd'hui, nous construisons un héritage pour les générations qui viennent.",
   },
   {
     id: "4",
-    name: "Harmella Raphaëlla ",
-    role: "Membre chorale",
+    name: "Harmella Raphaëlla",
+    role: "Membre de la chorale",
+    photoUrl: "/img/harmella.jpeg",
     quote:
-      "Je n'ai connu que l'église en bois. Faire partie de la construction de la nouvelle, c'est écrire la suite de son histoire.",
+      "C'était d'abord l'église de mon mari. Après notre mariage, les membres m'ont accueillie comme une famille. Aujourd'hui, avec notre fils, je suis heureuse de participer à la construction de notre nouvelle maison spirituelle.",
   },
 ];
 
@@ -86,24 +97,32 @@ export const testimonials: Testimonial[] = [
 // liée). À remplacer par les vraies entrées au fil de l'avancement réel.
 export const constructionUpdates: ConstructionUpdate[] = [
   {
-    id: "1",
-    day: 1,
-    date: "2026-07-20",
-    title: "Pose de la première pierre",
-    description: "Lancement officiel des travaux avec la pose du premier élément de la structure.",
-    mediaUrls: ["/img/premierPierre.jpeg"],
-    relatedStepId: "structure"
+    "id": "1",
+    "day": 35,
+    "date": "2026-09-04",
+    "title": "La montée des murs",
+    "description": "Les murs progressent rapidement et atteignent désormais 3 mètres de hauteur.",
+    "mediaUrls": ["/img/murs2.jpeg"],
+    "relatedStepId": "structure"
   },
   {
     id: "2",
-    day: 8, // Ajusté selon la chronologie (20 juillet au 27 juillet = 8 jours)
-    date: "2026-07-27",
+    day: 22,
+    date: "2026-08-18",
     title: "Les murs prennent forme",
     description: "La structure porteuse est désormais visible sur l'ensemble du bâtiment.",
     mediaUrls: ["/img/murs.jpeg"],
     relatedStepId: "structure"
+  },
+  {
+    id: "3",
+    day: 1,
+    date: "2026-07-27",
+    title: "Pose de la première pierre",
+    description: "Lancement officiel des travaux avec la pose du premier élément de la structure.",
+    mediaUrls: ["/img/premierPierre.jpeg"],
+    relatedStepId: "structure"
   }
-
 ];
 
 // Rapports financiers — montants à `null` tant que les chiffres réels ne

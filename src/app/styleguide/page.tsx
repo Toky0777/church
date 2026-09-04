@@ -15,7 +15,8 @@ import { Gallery } from "@/components/Gallery";
 import { FinancialReportCard } from "@/components/FinancialReportCard";
 import { WhatsAppCTA } from "@/components/WhatsAppCTA";
 import { SectionQuestion } from "@/components/SectionQuestion";
-import { constructionSteps } from "@/lib/placeholder-data";
+import { constructionSteps, budget } from "@/lib/placeholder-data";
+import { formatAr } from "@/lib/format";
 
 const sampleNeed = {
   id: "toiture",
@@ -96,10 +97,14 @@ export default function StyleguidePage() {
           </section>
 
           <section className="grid grid-cols-2 gap-8 sm:grid-cols-4">
-            <Statistic value="42 %" label="Avancement des travaux" />
-            <Statistic value="Montant à confirmer" label="Budget total" />
-            <Statistic value="Montant à confirmer" label="Déjà financé" />
-            <Statistic value="Montant à confirmer" label="Reste à financer" />
+            <Statistic value="18 %" label="Avancement des travaux" />
+            <Statistic value={formatAr(budget.totalAr)} label="Budget total" variant="neutral" />
+            <Statistic value={formatAr(budget.fundedAr)} label="Déjà financé" variant="positive" />
+            <Statistic
+              value={formatAr(budget.totalAr - budget.fundedAr)}
+              label="Reste à financer"
+              variant="highlight"
+            />
           </section>
 
           <section className="grid gap-8 sm:grid-cols-3">

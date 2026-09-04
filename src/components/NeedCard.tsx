@@ -21,12 +21,12 @@ export function NeedCard({ need }: NeedCardProps) {
 
       <dl className="mt-4 space-y-1 text-sm text-ink/70">
         <div className="flex justify-between">
-          <dt>Objectif</dt>
-          <dd>{formatAr(need.targetAmountAr)}</dd>
+          <dt className="font-semibold">Objectif</dt>
+          <dd className="font-semibold text-green-600">{formatAr(need.targetAmountAr)}</dd>
         </div>
         <div className="flex justify-between">
-          <dt>Déjà financé</dt>
-          <dd>{formatAr(need.fundedAmountAr)}</dd>
+          <dt className="font-semibold">Déjà financé</dt>
+          <dd className="">{formatAr(need.fundedAmountAr)}</dd>
         </div>
       </dl>
 

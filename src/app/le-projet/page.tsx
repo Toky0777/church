@@ -57,15 +57,15 @@ export default function LeProjetPage() {
           <section className="grid gap-10 border-y border-stone/25 py-16 sm:grid-cols-3">
             <div>
               <p className="text-sm text-ink/55">Capacité</p>
-              <p className="mt-1 font-display text-2xl">À confirmer</p>
+              <p className="mt-1 font-display text-2xl">350 personnes</p>
             </div>
             <div>
               <p className="text-sm text-ink/55">Surface</p>
-              <p className="mt-1 font-display text-2xl">À confirmer</p>
+              <p className="mt-1 font-display text-2xl">240 m²</p>
             </div>
             <div>
               <p className="text-sm text-ink/55">Inauguration prévue</p>
-              <p className="mt-1 font-display text-2xl">À confirmer</p>
+              <p className="mt-1 font-display text-2xl">Mars 2027</p>
             </div>
           </section>
 
